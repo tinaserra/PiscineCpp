@@ -5,29 +5,56 @@
 #                                                     +:+ +:+         +:+      #
 #    By: vserra <vserra@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/01/18 17:09:52 by vserra            #+#    #+#              #
-#    Updated: 2022/01/18 17:25:52 by vserra           ###   ########.fr        #
+#    Created: 2022/01/19 22:19:16 by vserra            #+#    #+#              #
+#    Updated: 2022/01/19 22:40:07 by vserra           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC			= clang++ -std=c++98 -Wall -Wextra -Werror
-RM			= rm -rf
-NAME		= ./megaphone
-NAME_SHORT	= megaphone
+SRC = megaphone.cpp
 
-SRCS		= megaphone.cpp
+NAME = megaphone
 
-_OK			= [\033[32mOK\033[0m]
+# override -> permet de reecrire la suite de la variable
+override CXXFLAGS += -std=c++98 -Wall -Wextra -Werror -MMD #-fsanitize=address
 
-$(NAME)		: $(SRCS)
-			@$(CC) $(SRCS) -o $(NAME)
-			@echo "$(_OK) $(NAME_SHORT) compiled"
+OBJ_DIR = obj
+SRC_DIR = src
+INC_DIR = inc
 
-clean		:
+OBJ = $(addprefix $(OBJ_DIR)/,$(SRC:.cpp=.o))
+DPD = $(addprefix $(OBJ_DIR)/,$(SRC:.cpp=.d))
 
-fclean		: clean
-			@$(RM) $(NAME)
+_CREATED = \033[32mCreated !\033[0m
 
-re			: fclean all
+all: $(NAME)
 
-.PHONY		: all clean fclean re
+# permet de pouvoir comparer la derniere modification de la dep par rapport a la regle
+$(NAME): $(OBJ)
+		@clang++ $(CXXFLAGS) -o $(NAME) $(OBJ)
+		@echo "$(NAME) : $(_CREATED)"
+
+# si le .cpp est plus recent que le .o on rentre dans la regle
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | .gitignore
+		@mkdir -p $(OBJ_DIR)
+		@clang++ $(CXXFLAGS) -I $(INC_DIR) -c $< -o $@
+
+.gitignore:
+		@echo $(NAME) > .gitignore
+
+debug : fclean
+	make all CFLAGS:="-DDEBUG -g"
+
+clean:
+	@rm -rf $(OBJ_DIR)
+	@echo "obj deleted"
+
+fclean:	clean
+	@rm -rf $(NAME)
+	@echo "[$(NAME)]: deleted"
+
+re: fclean all
+
+.PHONY: all, clean, fclean, re
+
+# Utilise les .d (et ignore s'ils n'existe pas)
+-include $(DPD)
