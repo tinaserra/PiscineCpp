@@ -6,7 +6,7 @@
 #    By: vserra <vserra@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/19 22:19:16 by vserra            #+#    #+#              #
-#    Updated: 2022/01/19 22:40:07 by vserra           ###   ########.fr        #
+#    Updated: 2022/01/19 22:49:45 by vserra           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | .gitignore
 		@echo $(NAME) > .gitignore
 
 debug : fclean
-	make all CFLAGS:="-DDEBUG -g"
+	make all CXXFLAGS:="-DDEBUG -g"
 
 clean:
 	@rm -rf $(OBJ_DIR)
