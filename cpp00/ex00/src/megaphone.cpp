@@ -6,13 +6,12 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 17:14:49 by vserra            #+#    #+#             */
-/*   Updated: 2022/01/19 21:42:19 by vserra           ###   ########.fr       */
+/*   Updated: 2022/01/19 22:46:19 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
-#include <locale>
 
 int		main(int ac, char **av)
 {
