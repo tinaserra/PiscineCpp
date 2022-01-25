@@ -114,3 +114,128 @@ int main()
     return (0);
 }
 ```
+
+## libraries 
+
+* ```#include <iostream>```
+
+Appeler ```iostream``` nous permet en fait de faire un peu plus qu'afficher des messages à l'écran : on pourra aussi récupérer ce que saisit l'utilisateur au clavier, comme nous le verrons plus tard.
+```iostream``` signifie « Input Output Stream », ce qui veut dire « Flux d'entrée-sortie ».
+
+* ```#include <cmath>```
+
+Pour avoir accès à plus de fonctions mathématiques.
+
+## interdit a 42
+
+```
+using namespace friend
+```
+
+## instructions
+
+```c++
+std::cout << "Hello world!" << std::endl;
+```
+
+```c++
+int ageUtilisateur(0); //On prepare une case mémoire pour stocker un entier
+std::cin >> ageUtilisateur; //On fait entrer un nombre dans cette case
+```
+
+```cout```: affiche un message à l'écran.
+
+```endl```: crée un retour à la ligne dans la console.
+
+```cin```: recupere ce que rentrel'utilisateur.
+
+* aternative au ```std::cin >> str```
+
+pour recuperer une string qui contiendrai des espace il faut utiliser ```std::getline();```
+
+```c++
+std::cout << "Quel est votre nom ?" << std::endl;
+
+std::string nomUtilisateur("Sans nom");
+std::getline(cin, nomUtilisateur); //On remplit cette case avec toute la ligne que l'utilisateur a écrit
+```
+* Quand on mélange l'utilisation des chevrons  ```>>``` et de ```std::getline()```, il faut toujours placer l'instruction ```cin.ignore()``` après la ligne ```cin>>a```. 
+
+```c++
+#include <iostream>
+#include <string>
+
+int main()
+{
+    std::cout << "Combien vaut pi ?" << std::endl;
+    double piUtilisateur(-1.); //On crée une case mémoire pour stocker un nombre réel
+    std::cin >> piUtilisateur; //Et on remplit cette case avec ce qu'écritl'utilisateur
+
+    std::cin.ignore();
+
+    std::cout << "Quel est votre nom ?" << std::endl;
+    std::string nomUtilisateur("Sans nom"); //On crée une case mémoire pour contenir une chaine de caractères
+    std::getline(std::cin, nomUtilisateur); //On remplit cette case avec toute la ligne que l'utilisateur a écrit
+     
+    std::cout << "Vous vous appelez " << nomUtilisateur << " et vous pensez que pi vaut " << piUtilisateur << "." << std::endl;
+
+    return 0;
+}
+```
+
+## les variables
+
+### les types de variable
+
+| TYPE | Ce qu'il peut contenir |
+| :-- | :-- |
+| ```bool``` |Une valeur parmi deux possibles, vrai (true) ou faux (false)|
+| ```char``` |Un caractère|
+| ```int``` |Un nombre entier|
+| ```unsigned int``` |Un nombre entier positif ou nul|
+| ```double``` |Un nombre à virgule|
+| ```string``` |Une chaîne de caractères|
+
+### declaration de variable
+
+* Syntaxe d'initialisation d'une variable en C++
+```TYPE NOM (VALEUR);```
+* Syntaxe d'initialisation d'une variable, héritée du C:
+```TYPE NOM = VALEUR;```
+
+### les strings
+
+```c++
+#include <string>
+
+std::string str ("hello world");
+```
+
+* declarer plusieurs variables
+
+```c++
+int a(2),b(4),c(-1);  //On déclare trois cases mémoires nommées a, b et c et  qui contiennent respectivement les valeurs 2, 4 et -1
+
+string prenom("Albert"), nom("Einstein"); //On déclare deux cases pouvant contenir des chaînes de caractères
+```
+
+### references
+
+* c'est un pointeur dereference. si on envoit une reference dans une fonction, la fonction va utiliser et / ou modifier la vraie zone memoire de la variable et pas la copie.
+
+```c++
+int ma_super_variable (42); //Une variable pour contenir 42
+
+int& ma_super_reference(ma_super_variable);  //Et une référence sur la variable 'ma_super_variable'
+```
+
+### les constantes
+
+les variables contantes se declarent avec le mot cle ```const```et sont des variables dont on ne peut pas modifier le contenu.
+
+```c++
+std::string const motDePasse("wAsTZsaswQ");
+double const pi(3.14);
+unsigned int const pointsDeVieMaximum(100);
+```
+
