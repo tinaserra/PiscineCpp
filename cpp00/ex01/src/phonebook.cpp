@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 19:17:48 by vserra            #+#    #+#             */
-/*   Updated: 2022/01/25 23:43:06 by vserra           ###   ########.fr       */
+/*   Updated: 2022/01/26 16:15:08 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,20 +81,18 @@ void	phonebook::search()
 	else
 	{
 		this->print_search_tab();
-	// dire a l'utilisateur de rentrer un index pour aficher les infos sur un contact ou 0 pour exit
-		std::cout << "Enter a contact number to display informations" << std::endl;
-		int id;
-		while (std::cin >> id)
+		// dire a l'utilisateur de rentrer un index pour aficher les infos 
+		// sur un contact ou 0 pour exit
+		std::cout << "Enter a contact number to display informations or 0 to exit" << std::endl;
+		int id = 0;
+		while (!(std::cin >> id) || id < 0 || id > this->total)
 		{
-			if (id < 0 || id > 8)
-			{
 				std::cin.clear();
 				std::cout << "Wrong contact number" << std::endl;
-			}
+				std::cout << "Try again with a number between 1 and " << this->total << std::endl;
+				std::cin.ignore();
 		}
 		if (id > 0)
-			this->contacts[id].print_contact_data();
+			this->contacts[id - 1].print_contact_data();
 	}
-	// check si l'index est valide
-	// print les infos du contct demande par le user
 }

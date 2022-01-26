@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 15:45:47 by vserra            #+#    #+#             */
-/*   Updated: 2022/01/25 23:37:35 by vserra           ###   ########.fr       */
+/*   Updated: 2022/01/26 16:17:12 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int		main()
 	phonebook.print_man();
 	while (cmd != "EXIT")
 	{
+		std::cout << "> ";
 		std::getline(std::cin, cmd);
 		if (cmd == "ADD")
 		{
