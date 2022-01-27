@@ -1,6 +1,18 @@
 # cpp
 Cpp modules from 42
 
+## Sujets
+
+* [cpp00](https://github.com/tinaserra/cpp/blob/main/links/cpp00_fr.subject.pdf)
+* [cpp01](https://github.com/tinaserra/cpp/blob/main/links/cpp01_en.subject.pdf)
+* [cpp02](https://github.com/tinaserra/cpp/blob/main/links/cpp02_fr.subject.pdf)
+* [cpp03](https://github.com/tinaserra/cpp/blob/main/links/cpp03_en.subject.pdf)
+* [cpp04](https://github.com/tinaserra/cpp/blob/main/links/cpp04_en.subject.pdf)
+* [cpp05](https://github.com/tinaserra/cpp/blob/main/links/cpp05_fr.subject.pdf)
+* [cpp06](https://github.com/tinaserra/cpp/blob/main/links/cpp06_fr.subject.pdf)
+* [cpp07](https://github.com/tinaserra/cpp/blob/main/links/cpp07_en.subject.pdf)
+* [cpp08](https://github.com/tinaserra/cpp/blob/main/links/cpp08_en.subject.pdf)
+
 ## 1. UNE STRUCTURE DE PROGRAMMATION PROCEDURALE :
 
 * Les langages de programmation conventionnels tels que COBOL, FORTRAN, C sont communément appelés programmation orientée procédurale.
