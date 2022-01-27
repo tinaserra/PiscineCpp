@@ -1,17 +1,17 @@
 # cpp
 Cpp modules from 42
 
-## Sujets
+## Sujets & scale de correction
 
-* [cpp00](https://github.com/tinaserra/cpp/blob/main/links/cpp00_fr.subject.pdf)
-* [cpp01](https://github.com/tinaserra/cpp/blob/main/links/cpp01_en.subject.pdf)
-* [cpp02](https://github.com/tinaserra/cpp/blob/main/links/cpp02_fr.subject.pdf)
-* [cpp03](https://github.com/tinaserra/cpp/blob/main/links/cpp03_en.subject.pdf)
-* [cpp04](https://github.com/tinaserra/cpp/blob/main/links/cpp04_en.subject.pdf)
-* [cpp05](https://github.com/tinaserra/cpp/blob/main/links/cpp05_fr.subject.pdf)
-* [cpp06](https://github.com/tinaserra/cpp/blob/main/links/cpp06_fr.subject.pdf)
-* [cpp07](https://github.com/tinaserra/cpp/blob/main/links/cpp07_en.subject.pdf)
-* [cpp08](https://github.com/tinaserra/cpp/blob/main/links/cpp08_en.subject.pdf)
+* cpp00 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp00_fr.subject.pdf) | [scale]()
+* cpp01 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp01_en.subject.pdf) | [scale]()
+* cpp02 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp02_fr.subject.pdf) | [scale]()
+* cpp03 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp03_en.subject.pdf) | [scale]()
+* cpp04 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp04_en.subject.pdf) | [scale]()
+* cpp05 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp05_fr.subject.pdf) | [scale]()
+* cpp06 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp06_fr.subject.pdf) | [scale]()
+* cpp07 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp07_en.subject.pdf) | [scale]()
+* cpp08 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp08_en.subject.pdf) | [scale]()
 
 ## 1. UNE STRUCTURE DE PROGRAMMATION PROCEDURALE :
 
