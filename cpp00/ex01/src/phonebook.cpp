@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 19:17:48 by vserra            #+#    #+#             */
-/*   Updated: 2022/01/26 16:15:08 by vserra           ###   ########.fr       */
+/*   Updated: 2022/01/27 14:19:58 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ void	phonebook::add()
 		std::cout << "The phone book is full !" << std::endl;
 	else
 	{
-		this->contacts[this->total].get_data(this->total + 1);
-		this->total++;
+		if (this->contacts[this->total].get_data(this->total + 1))
+			this->total++;
 	}
 }
 
@@ -88,9 +88,9 @@ void	phonebook::search()
 		while (!(std::cin >> id) || id < 0 || id > this->total)
 		{
 				std::cin.clear();
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 				std::cout << "Wrong contact number" << std::endl;
 				std::cout << "Try again with a number between 1 and " << this->total << std::endl;
-				std::cin.ignore();
 		}
 		if (id > 0)
 			this->contacts[id - 1].print_contact_data();

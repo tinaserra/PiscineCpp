@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 19:18:06 by vserra            #+#    #+#             */
-/*   Updated: 2022/01/26 15:03:56 by vserra           ###   ########.fr       */
+/*   Updated: 2022/01/27 14:10:08 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,17 @@ contact::~contact()
 bool contact::get_data(int index)
 {
 	this->index = index;
+	size_t len = 0;
 	for (int i = 0; i < 5; i++)
 	{
 		std::cout << "Enter a " << contact::info[i] << ":" << std::endl;
 		std::getline(std::cin, this->data[i]);
-
-		// if (this->data[i].length() == 0)
-		// {
-		// 	std::cout << "Contact not added !" << std::endl;
-		// 	return (false);
-		// }
+		len += this->data[i].length();
+	}
+	if (len == 0)
+	{
+		std::cout << "Contact not added !" << std::endl;
+		return (false);
 	}
 	std::cout << "Contact added !" << std::endl;
 	return (true);

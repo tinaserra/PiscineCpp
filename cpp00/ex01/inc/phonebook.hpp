@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 19:19:00 by vserra            #+#    #+#             */
-/*   Updated: 2022/01/25 20:36:33 by vserra           ###   ########.fr       */
+/*   Updated: 2022/01/27 13:51:23 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <iomanip>
+# include <limits>
 # include <string>
 # include "contact.hpp"
 
