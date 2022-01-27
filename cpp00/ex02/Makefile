@@ -6,13 +6,14 @@
 #    By: vserra <vserra@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/27 14:23:35 by vserra            #+#    #+#              #
-#    Updated: 2022/01/27 14:23:43 by vserra           ###   ########.fr        #
+#    Updated: 2022/01/27 15:17:46 by vserra           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp
+SRC = Account.cpp \
+	  tests.cpp
 
-NAME = awsomephonebook
+NAME = awsomeAccount
 
 # override -> permet de reecrire la suite de la variable
 override CXXFLAGS += -std=c++98 -Wall -Wextra -Werror -MMD
