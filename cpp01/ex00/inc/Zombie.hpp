@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 15:08:09 by vserra            #+#    #+#             */
-/*   Updated: 2022/01/28 15:44:40 by vserra           ###   ########.fr       */
+/*   Updated: 2022/01/28 16:06:25 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ class Zombie
     private:
         std::string _name;    
 };
-
 
 Zombie* newZombie(std::string name);
 void randomChump(std::string name);
