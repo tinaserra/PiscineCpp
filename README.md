@@ -13,6 +13,17 @@ Cpp modules from 42
 * cpp07 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp07_en.subject.pdf) | [scale]()
 * cpp08 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp08_en.subject.pdf) | [scale]()
 
+### regles generales
+
+* OK : utiliser la librairie standard
+* INTERDIT : utiliser les fonctions `*alloc` `*printf` `free`
+* INTERDIT : utiliser la STL sauf module 08, pas de `#include <algorithm>`
+* INTERDIT : les mot-clés `using` `namespace` `friend`
+* INTERDIT : librairies externes : incluant `C++11`, `Boost`...
+* OBLIGATOIRE : Le compilateur `clang++`
+* OBLIGATOIRE : les flags `-Wall` `-Wextra` `-Werror`
+
+
 ## 1. UNE STRUCTURE DE PROGRAMMATION PROCEDURALE :
 
 * Les langages de programmation conventionnels tels que COBOL, FORTRAN, C sont communément appelés programmation orientée procédurale.
