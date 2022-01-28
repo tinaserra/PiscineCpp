@@ -30,7 +30,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | .gitignore
 
 .gitignore:
 		@echo $(NAME) > .gitignore
-		@echo $(OBJ_DIR) > .gitignore
+		@echo $(OBJ_DIR) >> .gitignore
 
 debug : fclean
 	make all CXXFLAGS:="-DDEBUG -g"
