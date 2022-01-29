@@ -13,13 +13,14 @@ OBJ = $(addprefix $(OBJ_DIR)/,$(SRC:.cpp=.o))
 DPD = $(addprefix $(OBJ_DIR)/,$(SRC:.cpp=.d))
 
 _CREATED = \033[32mCreated !\033[0m
+_DELETED = \033[1;34mdeleted\033[0m
 
 all: $(NAME)
 
 # permet de pouvoir comparer la derniere modification de la dep par rapport a la regle
 $(NAME): $(OBJ)
 		@clang++ $(CXXFLAGS) -o $(NAME) $(OBJ)
-		@echo "$(NAME) : $(_CREATED)"
+		@echo "[$(NAME)]: $(_CREATED)"
 
 # si le .cpp est plus recent que le .o on rentre dans la regle
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | .gitignore
@@ -35,11 +36,11 @@ debug : fclean
 
 clean:
 	@rm -rf $(OBJ_DIR)
-	@echo "obj deleted"
+	@echo "obj $(_DELETED)"
 
 fclean:	clean
 	@rm -rf $(NAME)
-	@echo "[$(NAME)]: deleted"
+	@echo "[$(NAME)]: $(_DELETED)"
 
 re: fclean all
 
