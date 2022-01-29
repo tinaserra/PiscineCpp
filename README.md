@@ -3,15 +3,15 @@ Cpp modules from 42
 
 ## Sujets & scale de correction
 
-* cpp00 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp00_fr.subject.pdf) | [scale]()
-* cpp01 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp01_en.subject.pdf) | [scale]()
-* cpp02 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp02_fr.subject.pdf) | [scale]()
-* cpp03 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp03_en.subject.pdf) | [scale]()
-* cpp04 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp04_en.subject.pdf) | [scale]()
-* cpp05 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp05_fr.subject.pdf) | [scale]()
-* cpp06 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp06_fr.subject.pdf) | [scale]()
-* cpp07 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp07_en.subject.pdf) | [scale]()
-* cpp08 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp08_en.subject.pdf) | [scale]()
+* cpp00 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp00_fr.subject.pdf) | [scale](https://github.com/tinaserra/cpp/blob/main/links/scale_cpp00.pdf)
+* cpp01 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp01_en.subject.pdf) | [scale](https://github.com/tinaserra/cpp/blob/main/links/scale_cpp01.pdf)
+* cpp02 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp02_fr.subject.pdf) | [scale](https://github.com/tinaserra/cpp/blob/main/links/scale_cpp02.pdf)
+* cpp03 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp03_en.subject.pdf) | [scale](https://github.com/tinaserra/cpp/blob/main/links/scale_cpp03.pdf)
+* cpp04 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp04_en.subject.pdf) | [scale](https://github.com/tinaserra/cpp/blob/main/links/scale_cpp04.pdf)
+* cpp05 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp05_fr.subject.pdf) | [scale](https://github.com/tinaserra/cpp/blob/main/links/scale_cpp05.pdf)
+* cpp06 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp06_fr.subject.pdf) | [scale](https://github.com/tinaserra/cpp/blob/main/links/scale_cpp06.pdf)
+* cpp07 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp07_en.subject.pdf) | [scale](https://github.com/tinaserra/cpp/blob/main/links/scale_cpp07.pdf)
+* cpp08 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp08_en.subject.pdf) | [scale](https://github.com/tinaserra/cpp/blob/main/links/scale_cpp08.pdf)
 
 ### regles generales
 
