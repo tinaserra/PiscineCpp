@@ -1,4 +1,5 @@
-SRC = main.cpp
+SRC = main.cpp \
+	  Karen.cpp
 
 NAME = karen
 
