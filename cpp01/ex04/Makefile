@@ -1,5 +1,4 @@
-SRC = main.cpp \
-	  Karen.cpp
+SRC = main.cpp
 
 NAME = sedIsForLosers
 
