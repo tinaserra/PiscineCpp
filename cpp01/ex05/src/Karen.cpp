@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 14:34:08 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/01 15:50:35 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/03 15:03:03 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 
 Karen::Karen()
 {
-	std::cout << "Karen: is being constructed !" << std::endl;
 	_levels[0] = "DEBUG";
 	_levels[1] = "INFO";
 	_levels[2] = "WARNING";
@@ -31,7 +30,6 @@ Karen::Karen()
 
 Karen::~Karen()
 {
-	std::cout << "Karen: is being destructed !" << std::endl;
 }
 
 /* -------------------------------------------------------------------------- */
