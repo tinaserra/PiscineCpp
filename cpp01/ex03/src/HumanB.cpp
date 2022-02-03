@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 12:24:50 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/01 12:33:02 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/03 17:43:08 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,8 @@ void	HumanB::setWeapon(Weapon &weapon)
 
 void	HumanB::attack()
 {
-	std::cout << _name << " attack with his " << (*_weapon).getType() << std::endl;
+	if (_weapon)
+		std::cout << _name << " attack with his " << (*_weapon).getType() << std::endl;
+	else
+		std::cout << _name << " could not attack" << std::endl;
 }

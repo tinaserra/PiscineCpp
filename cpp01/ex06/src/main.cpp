@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 14:58:26 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/03 15:27:20 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/03 17:43:36 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,10 @@ int main(int ac, char **av)
 	{
 		case 0:
 			karen.complain("DEBUG");
-            karen.complain("INFO");
-            karen.complain("WARNING");
-            karen.complain("ERROR");
-			break;
 		case 1:
 			karen.complain("INFO");
-            karen.complain("WARNING");
-            karen.complain("ERROR");
-			break;
 		case 2:
 			karen.complain("WARNING");
-            karen.complain("ERROR");
-			break;
 		case 3:
 			karen.complain("ERROR");
 			break;
