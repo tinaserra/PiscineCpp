@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
+/*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 15:46:19 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/04 19:57:07 by tinaserra        ###   ########.fr       */
+/*   Updated: 2022/02/04 23:41:34 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,67 +90,67 @@ const Fixed 	&Fixed::max(const Fixed &a, const Fixed &b)
 /* OPERATORS                                                                  */
 /* -------------------------------------------------------------------------- */
 
-Fixed	&Fixed::operator=(Fixed const &ref)
+Fixed	&Fixed::operator=(Fixed const &rhs)
 {
 	// std::cout << "Assignation operator called" << std::endl;
-	_nb = ref.getRawBits();
+	_nb = rhs.getRawBits();
 	return (*this);
 }
 
-std::ostream &operator<<(std::ostream &o, Fixed const &ref)
+std::ostream &operator<<(std::ostream &o, Fixed const &rhs)
 {
-	o << ref.toFloat();
+	o << rhs.toFloat();
 	return (o);
 }
 
-bool	Fixed::operator>(const Fixed &ref) const
+bool	Fixed::operator>(const Fixed &rhs) const
 {
-	return (_nb > ref._nb);
+	return (_nb > rhs._nb);
 }
 
-bool	Fixed::operator<(const Fixed &ref) const
+bool	Fixed::operator<(const Fixed &rhs) const
 {
-	return (_nb < ref._nb);
+	return (_nb < rhs._nb);
 }
 
-bool	Fixed::operator>=(const Fixed &ref) const
+bool	Fixed::operator>=(const Fixed &rhs) const
 {
-	return (_nb >= ref._nb);
+	return (_nb >= rhs._nb);
 }
 
-bool	Fixed::operator<=(const Fixed &ref) const
+bool	Fixed::operator<=(const Fixed &rhs) const
 {
-	return (_nb <= ref._nb);
+	return (_nb <= rhs._nb);
 }
 
-bool	Fixed::operator==(const Fixed &ref) const
+bool	Fixed::operator==(const Fixed &rhs) const
 {
-	return (_nb == ref._nb);
+	return (_nb == rhs._nb);
 }
 
-bool	Fixed::operator!=(const Fixed &ref) const
+bool	Fixed::operator!=(const Fixed &rhs) const
 {
-	return (_nb != ref._nb);
+	return (_nb != rhs._nb);
 }
 
-Fixed	Fixed::operator+(const Fixed &ref) const
+Fixed	Fixed::operator+(const Fixed &rhs) const
 {
-	return (Fixed(toFloat() + ref.toFloat()));
+	return (Fixed(toFloat() + rhs.toFloat()));
 }
 
-Fixed	Fixed::operator-(const Fixed &ref) const
+Fixed	Fixed::operator-(const Fixed &rhs) const
 {
-	return (Fixed(toFloat() - ref.toFloat()));
+	return (Fixed(toFloat() - rhs.toFloat()));
 }
 
-Fixed	Fixed::operator*(const Fixed &ref) const
+Fixed	Fixed::operator*(const Fixed &rhs) const
 {
-	return (Fixed(toFloat() * ref.toFloat()));
+	return (Fixed(toFloat() * rhs.toFloat()));
 }
 
-Fixed	Fixed::operator/(const Fixed &ref) const
+Fixed	Fixed::operator/(const Fixed &rhs) const
 {
-	return (Fixed(toFloat() / ref.toFloat()));
+	return (Fixed(toFloat() / rhs.toFloat()));
 }
 
 Fixed &	Fixed::operator--(void)

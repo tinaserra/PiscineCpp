@@ -1,36 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   bsp.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/04 15:48:56 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/05 00:05:55 by vserra           ###   ########.fr       */
+/*   Created: 2022/02/05 00:17:47 by vserra            #+#    #+#             */
+/*   Updated: 2022/02/05 00:22:03 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Fixed.hpp"
-
+#include "Point.hpp"
 
 /*
  * aire d'un triangle
  * ((xb - xa)(yc - ya) - (xc - xa)(yb - ya)) / 2
 */
 
-int main( void )
-{
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+// si aireABx + aireACx + aireBCx < aireABC
+// le point x est dans le triangle ABC
 
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
-
-	return 0;
-}
+bool bsp(Point const a, Point const b, Point const c, Point const point);

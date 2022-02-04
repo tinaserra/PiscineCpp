@@ -3,14 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+         #
+#    By: vserra <vserra@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/04 15:14:32 by tinaserra         #+#    #+#              #
-#    Updated: 2022/02/04 18:52:01 by tinaserra        ###   ########.fr        #
+#    Updated: 2022/02/05 00:08:38 by vserra           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = Fixed.cpp \
+	  Point.cpp \
+	  bsp.cpp \
 	  main.cpp
 
 NAME = Fixed

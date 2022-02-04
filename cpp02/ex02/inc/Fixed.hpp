@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
+/*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 15:38:43 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/04 19:12:00 by tinaserra        ###   ########.fr       */
+/*   Updated: 2022/02/04 23:47:29 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,19 @@ class Fixed
 		Fixed(Fixed const &ref); // Constructeur de recopie
 		~Fixed(); // Destructeur
 
-		Fixed	&operator=(Fixed const &ref); // Operator d'affectation
+		Fixed	&operator=(Fixed const &rhs); // Operator d'affectation
 
-		bool	operator>(const Fixed &ref) const;
-		bool	operator<(const Fixed &ref) const;
-		bool	operator>=(const Fixed &ref) const;
-		bool	operator<=(const Fixed &ref) const;
-		bool	operator==(const Fixed &ref) const;
-		bool	operator!=(const Fixed &ref) const;
+		bool	operator>(const Fixed &rhs) const;
+		bool	operator<(const Fixed &rhs) const;
+		bool	operator>=(const Fixed &rhs) const;
+		bool	operator<=(const Fixed &rhs) const;
+		bool	operator==(const Fixed &rhs) const;
+		bool	operator!=(const Fixed &rhs) const;
 
-		Fixed	operator+(const Fixed &ref) const;
-		Fixed	operator-(const Fixed &ref) const;
-		Fixed	operator*(const Fixed &ref) const;
-		Fixed	operator/(const Fixed &ref) const;
+		Fixed	operator+(const Fixed &rhs) const;
+		Fixed	operator-(const Fixed &rhs) const;
+		Fixed	operator*(const Fixed &rhs) const;
+		Fixed	operator/(const Fixed &rhs) const;
 		Fixed 	&operator++(void);
 		Fixed 	&operator--(void);
 		Fixed	operator++(int);
@@ -55,6 +55,8 @@ class Fixed
 		static int const _bits = 8;
 };
 
-std::ostream &operator<<(std::ostream &o, Fixed const &ref);
+
+
+std::ostream &operator<<(std::ostream &o, Fixed const &rhs);
 
 #endif
