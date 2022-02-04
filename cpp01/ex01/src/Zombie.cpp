@@ -6,7 +6,7 @@
 /*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 16:15:44 by vserra            #+#    #+#             */
-/*   Updated: 2022/01/29 12:04:56 by tinaserra        ###   ########.fr       */
+/*   Updated: 2022/01/31 15:32:55 by tinaserra        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,17 +41,17 @@ std::string	Zombie::_getName() const
 	return (_name);
 }
 
+void Zombie::giveName(std::string name)
+{
+	Zombie::_name = name;
+}
+
 /* -------------------------------------------------------------------------- */
-/* FUNCTIONS MEMBER                                                           */
+/* MEMBER FUNCTIONS                                                           */
 /* -------------------------------------------------------------------------- */
 
 void	Zombie::announce(void)
 {
 	std::cout << "\033[1;32m" << this->_name
 		<< "\033[0m" << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
-void Zombie::giveName(std::string name)
-{
-	Zombie::_name = name;
 }
