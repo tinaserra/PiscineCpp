@@ -30,6 +30,22 @@ Cpp modules from 42
 * Les fichiers et les classes : `NomDeClasse.hpp`ou `NomDeClasse.h`, `NomDeClasse.cpp`
 * Tous les messages doivent être terminés par `'\n'`
 
+```c++
+enBlanc='\033[37m'
+enBleu='\033[34m'
+enJaune='\033[33m'
+enRouge='\033[31m'
+enVert='\033[32m'
+enNoir='\033[30m'
+
+enGras='033[1m'
+enSouligne='033[4m'
+enClignotant='033[5m'
+enSurligne='033[7m'
+
+enDefaut='\033[0m'
+```
+
 ## 1. libraries
 
 * ```#include <iostream>```
