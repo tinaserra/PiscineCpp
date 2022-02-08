@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 00:18:39 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/05 00:34:03 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/08 13:10:08 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ Point::Point(float const x, float const y) :_x(x), _y(y)
 {
 }
 
-Point::Point(Point const & ref)
-{
-	_x = ref._x;
-	_y = ref._y;
-}
+// Point::Point(Point const & rhs)
+// {
+	// _x = rhs._x;
+	// _y = rhs._y;
+// }
 
 /* -------------------------------------------------------------------------- */
 /* DESTRUCTORS                                                                */
@@ -42,12 +42,12 @@ Point::~Point(void)
 /* ACCESSORS                                                                  */
 /* -------------------------------------------------------------------------- */
 
-int	Point::getX(void) const
+Fixed	Point::getX(void) const
 {
 	return (_x); 
 }
 
-int	Point::getY(void) const
+Fixed	Point::getY(void) const
 {
 	return (_y); 
 }
@@ -56,10 +56,10 @@ int	Point::getY(void) const
 /* MEMBER FUNCTIONS                                                           */
 /* -------------------------------------------------------------------------- */
 
-float	Point::toFloat(void) const
-{
-	return (_nb / (float)(1 << _bits));
-}
+// float	Point::toFloat(void) const
+// {
+// 	return (_nb / (float)(1 << _bits));
+// }
 
 /* -------------------------------------------------------------------------- */
 /* OPERATORS                                                                  */
@@ -67,7 +67,8 @@ float	Point::toFloat(void) const
 
 Point	&Point::operator=(Point const &rhs)
 {
-	_x = rhs.getX();
-	_y = rhs.getY();
+	(void)rhs;
+	// _x = rhs.getX();
+	// _y = rhs.getY();
 	return (*this);
 }

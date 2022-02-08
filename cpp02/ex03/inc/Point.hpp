@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 00:09:28 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/05 00:31:02 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/08 13:12:44 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ class Point
 	public:
 		Point(); // Constructeur par défaut
 		Point(float const x, float const y);
-		Point(Point const &ref); // Constructeur de recopie
+		// Point(Point const &rhs); // Constructeur de recopie
 		~Point(); // Destructeur
 
 		Point	&operator=(Point const &rhs); // Operator d'affectation
 
-		int		getX(void) const;
-		int		getY(void) const;
+		Fixed	getX(void) const;
+		Fixed	getY(void) const;
 
 	private:
 		Fixed const _x;

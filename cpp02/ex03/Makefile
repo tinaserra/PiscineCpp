@@ -6,7 +6,7 @@
 #    By: vserra <vserra@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/04 15:14:32 by tinaserra         #+#    #+#              #
-#    Updated: 2022/02/05 00:08:38 by vserra           ###   ########.fr        #
+#    Updated: 2022/02/08 13:21:26 by vserra           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ SRC = Fixed.cpp \
 	  bsp.cpp \
 	  main.cpp
 
-NAME = Fixed
+NAME = bsp
 
 # override -> permet de reecrire la suite de la variable
 override CXXFLAGS += -std=c++98 -Wall -Wextra -Werror -MMD

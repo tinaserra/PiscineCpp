@@ -6,12 +6,12 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 15:48:56 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/05 00:05:55 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/08 13:11:47 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Fixed.hpp"
+#include "Point.hpp"
 
 
 /*
@@ -19,18 +19,21 @@
  * ((xb - xa)(yc - ya) - (xc - xa)(yb - ya)) / 2
 */
 
-int main( void )
+int		main()
 {
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+	Point a(1, 1);
+	Point b(4, 3);
+	Point c(2, 6);
 
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
+	Point point1(1, 2); // out
+	Point point2(2, 3); // in
+	Point point3(2.5, 3.5); // in
+	Point point4(2, 6); // out
 
-	return 0;
+	std::cout << "point 1" << bsp(a, b, c, point1) << std::endl;
+	std::cout << "point 2" << bsp(a, b, c, point2) << std::endl;
+	std::cout << "point 3" << bsp(a, b, c, point3) << std::endl;
+	std::cout << "point 4" << bsp(a, b, c, point4) << std::endl;
+
+	return (0);
 }
