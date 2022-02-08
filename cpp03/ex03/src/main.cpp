@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 17:14:10 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/08 19:24:31 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/08 19:51:24 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int main()
 {
-	DiamondTrap sc("Player1", 50, 100, 30);
+	DiamondTrap sc("Player1");
 
 	sc.highFivesGuys();
 	sc.attack("Player2");
