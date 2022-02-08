@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:21:32 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/08 14:22:31 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/08 18:47:56 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,5 @@ class ScavTrap : public ClapTrap
 		void 		guardGate(void) const;
 
 };
-
-std::ostream &operator<<(std::ostream & o, ClapTrap const & rhs);
 
 #endif
