@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 17:12:47 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/08 14:57:25 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/08 15:02:42 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 /* CONSTRUCTORS                                                               */
 /* -------------------------------------------------------------------------- */
 
-ClapTrap::ClapTrap(void) : _name("null"), _hit_points(10), _energy_points(10), _attack_damage(0)
+ClapTrap::ClapTrap() : _name("null"), _hit_points(10), _energy_points(10), _attack_damage(0)
 {
 	std::cout << "\033[1m[ClapTrap]\033[0m Default constructor called: " << _name << std::endl;
 }
@@ -43,7 +43,7 @@ ClapTrap::ClapTrap(ClapTrap const & rhs)
 /* -------------------------------------------------------------------------- */
 
 ClapTrap::~ClapTrap(void) {
-	std::cout << _name << ": is being destructed !" << std::endl;
+	std::cout << "\033[1m[ClapTrap]\033[0m Destructor called: " << _name << std::endl;
 }
 
 /* -------------------------------------------------------------------------- */
