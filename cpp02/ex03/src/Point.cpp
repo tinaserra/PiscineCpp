@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 00:18:39 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/08 13:10:08 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/09 16:27:14 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ Point::Point(float const x, float const y) :_x(x), _y(y)
 {
 }
 
-// Point::Point(Point const & rhs)
-// {
-	// _x = rhs._x;
-	// _y = rhs._y;
-// }
+Point::Point(Point const & rhs)
+{
+	_x = rhs._x;
+	_y = rhs._y;
+}
 
 /* -------------------------------------------------------------------------- */
 /* DESTRUCTORS                                                                */
@@ -67,8 +67,8 @@ Fixed	Point::getY(void) const
 
 Point	&Point::operator=(Point const &rhs)
 {
-	(void)rhs;
-	// _x = rhs.getX();
-	// _y = rhs.getY();
+	// (void)rhs;
+	_x = rhs.getX();
+	_y = rhs.getY();
 	return (*this);
 }
