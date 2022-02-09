@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 17:14:10 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/09 16:12:34 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/09 20:07:23 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ int main()
 	p1.attack(matthieu);
 	p2.takeDamage(p1.getAttackDamage());
 	p1.beRepaired(10);
+	p1.beRepaired(0);
+	p1.beRepaired(-1);
+	p1.beRepaired(1256551565);
 	p1.whoAmI();
 
 	std::cout << std::endl;

@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 18:50:56 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/09 16:37:55 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/09 20:26:28 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ DiamondTrap::DiamondTrap()
 
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name")
 {
-	_name = name + "_clap_name";
+	_name = name;
 	_hit_points = 50;
 	_energy_points = 100;
 	_attack_damage = 30;

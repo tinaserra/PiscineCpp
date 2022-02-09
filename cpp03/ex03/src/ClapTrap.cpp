@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 17:12:47 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/09 15:57:28 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/09 20:22:22 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,16 +88,17 @@ void	ClapTrap::attack(std::string const & target)
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-	if (amount >= _hit_points)
-	{
-		_hit_points = 0;
-		std::cout << "ClapTrap " << _name << " take damage causing " << amount << " points of damage." << std::endl;
-		std::cout << "ClapTrap " << _name << " is dead" << std::endl;
-		return ;
-	}
 	if (_energy_points <= 0)
 	{
 		std::cout << "ClapTrap " << _name << " havn't enought energy point" << std::endl;
+		return ;
+	}
+	if (amount >= _hit_points || amount > 75892)
+	{
+		_hit_points = 0;
+		_energy_points--;
+		std::cout << "ClapTrap " << _name << " take damage causing " << amount << " points of damage." << std::endl;
+		std::cout << "ClapTrap " << _name << " is dead" << std::endl;
 		return ;
 	}
 	_energy_points--;
@@ -116,8 +117,16 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		return ;
 	}
 	_energy_points--;
-	_hit_points += amount;
-	std::cout << "ClapTrap " << _name << " earned " << amount << " hit points. ";
+	if (amount > 75892)
+	{
+		_hit_points = 75892;
+		std::cout << "ClapTrap " << _name << " earned 75892 hit points. ";
+	}
+	else
+	{
+		_hit_points += amount;
+		std::cout << "ClapTrap " << _name << " earned " << amount << " hit points. ";
+	}
 	std::cout << "Total HP: " << _hit_points << std::endl;
 }
 
