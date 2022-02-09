@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:23:58 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/08 15:04:42 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/09 16:42:56 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,8 @@
 /* CONSTRUCTORS                                                               */
 /* -------------------------------------------------------------------------- */
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap() : ClapTrap("")
 {
-	_name = "ScavTrap";
 	_hit_points = 100;
 	_energy_points = 50;
 	_attack_damage = 20;
@@ -26,9 +25,8 @@ ScavTrap::ScavTrap()
 	std::cout << "\033[1m[ScavTrap]\033[0m Default constructor called: " << _name << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-	_name = name;
 	_hit_points = 100;
 	_energy_points = 50;
 	_attack_damage = 20;
