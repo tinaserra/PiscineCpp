@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 00:17:47 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/09 17:31:49 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/09 18:05:00 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 /*
  * aire d'un triangle
  * ((xb - xa)(yc - ya) - (xc - xa)(yb - ya)) / 2
+ * si (aireABp + aireACp + aireBCp) == aireABC
+ * -> le point p est dans le triangle ABC
+ * si une aire vaut zero le point est sur le bord du triangle
 */
-// mais si une aire vaut zero l point est sur e bord du triangle 
-// si (aireABx + aireACx + aireBCx) == aireABC
-// le point x est dans le triangle ABC
 
 Fixed	aire(Point p1, Point p2, Point p3)
 {
@@ -43,15 +43,15 @@ bool	bsp(Point a, Point b, Point c, Point point)
 	Fixed aireABp = aire(point, a, b);
 	Fixed aireACp = aire(point, a, c);
 	Fixed aireBCp = aire(point, c, b);
-	std::cout << std::endl;
-	std::cout << "aire abc: " << aire(a, b, c) << std::endl;
-	std::cout << "aire pab: " << aire(point, a, b) << std::endl;
-	std::cout << "aire pac: " << aire(point, a, c) << std::endl;
-	std::cout << "aire pcb: " << aire(point, c, b) << std::endl;
+	// std::cout << std::endl;
+	// std::cout << "aire abc: " << aire(a, b, c) << std::endl;
+	// std::cout << "aire pab: " << aire(point, a, b) << std::endl;
+	// std::cout << "aire pac: " << aire(point, a, c) << std::endl;
+	// std::cout << "aire pcb: " << aire(point, c, b) << std::endl;
 
 	if (aireABp == 0 || aireACp == 0 || aireBCp == 0)
 		return (false);
 	if ((aireABp + aireACp + aireBCp) == aireABC)
-		return (true); // le point est dans le triangle
-	return (false); // le point n'est pas dan le triangle
+		return (true);
+	return (false);
 }
