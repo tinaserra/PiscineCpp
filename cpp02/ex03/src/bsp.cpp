@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 00:17:47 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/09 17:22:36 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/09 17:31:49 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
  * aire d'un triangle
  * ((xb - xa)(yc - ya) - (xc - xa)(yb - ya)) / 2
 */
-
-// si aireABx + aireACx + aireBCx < aireABC
+// mais si une aire vaut zero l point est sur e bord du triangle 
+// si (aireABx + aireACx + aireBCx) == aireABC
 // le point x est dans le triangle ABC
 
 Fixed	aire(Point p1, Point p2, Point p3)
@@ -49,12 +49,9 @@ bool	bsp(Point a, Point b, Point c, Point point)
 	std::cout << "aire pac: " << aire(point, a, c) << std::endl;
 	std::cout << "aire pcb: " << aire(point, c, b) << std::endl;
 
-	if ((aireABp + aireACp + aireBCp) < aireABC)
+	if (aireABp == 0 || aireACp == 0 || aireBCp == 0)
+		return (false);
+	if ((aireABp + aireACp + aireBCp) == aireABC)
 		return (true); // le point est dans le triangle
 	return (false); // le point n'est pas dan le triangle
 }
-
-	// std::cout << "a: " << a.getX() << ", " << a.getY() << std::endl;
-	// std::cout << "b: " << b.getX() << ", " << b.getY() << std::endl;
-	// std::cout << "c: " << c.getX() << ", " << c.getY() << std::endl;
-	// std::cout << "p: " << point.getX() << ", " << point.getY() << std::endl;
