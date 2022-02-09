@@ -30,6 +30,32 @@ Cpp modules from 42
 * Les fichiers et les classes : `NomDeClasse.hpp`ou `NomDeClasse.h`, `NomDeClasse.cpp`
 * Tous les messages doivent être terminés par `'\n'`
 
+## Progression
+
+1. cpp00 ✅
+- [x] ex00
+- [x] ex01
+- [x] ex02
+2. cpp01 ✅
+- [x] ex00
+- [x] ex01
+- [x] ex02
+- [x] ex03
+- [x] ex04
+- [x] ex05
+- [x] ex06
+3. cpp02
+- [x] ex00
+- [x] ex01
+- [x] ex02
+- [ ] ex03
+3. cpp03
+- [x] ex00
+- [x] ex01
+- [x] ex02
+- [ ] ex03
+
+
 ## Les couleurs
 ```c++
 enBlanc='\033[37m'
