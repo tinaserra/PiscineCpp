@@ -6,7 +6,7 @@
 #    By: vserra <vserra@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/07 17:06:30 by tinaserra         #+#    #+#              #
-#    Updated: 2022/02/08 18:35:39 by vserra           ###   ########.fr        #
+#    Updated: 2022/02/09 16:15:15 by vserra           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRC = ClapTrap.cpp \
 	  DiamondTrap.cpp \
 	  main.cpp
 
-NAME = FragTrap
+NAME = DiamondTrap
 
 # override -> permet de reecrire la suite de la variable
 override CXXFLAGS += -std=c++98 -Wall -Wextra -Werror -MMD

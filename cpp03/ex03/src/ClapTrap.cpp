@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 17:12:47 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/08 15:02:42 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/09 15:57:28 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ ClapTrap::ClapTrap() : _name("null"), _hit_points(10), _energy_points(10), _atta
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hit_points(10), _energy_points(10), _attack_damage(0)
 {
-	std::cout << _name << ": is being constructed !" << std::endl;
+	std::cout << "\033[1m[ClapTrap]\033[0m Name constructor called: " << _name << std::endl;
 	std::cout << _name << ": hit points: " << _hit_points << std::endl;
 	std::cout << _name << ": energy points: " << _energy_points << std::endl;
 	std::cout << _name << ": attack damage: " << _attack_damage << std::endl;

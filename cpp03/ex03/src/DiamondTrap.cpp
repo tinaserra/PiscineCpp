@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 18:50:56 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/08 19:53:43 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/09 16:08:49 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,9 @@ DiamondTrap::DiamondTrap()
 	std::cout << "\033[1m[DiamondTrap]\033[0m Default constructor called: " << _name << std::endl;
 }
 
-// class Guerrier : public PersoCourageux, public PersoFort {
-// public:
-// 	Guerrier(string nom, int ptsDeCourage, int ptsDeForce) : ptsDeCourage(nom, ptsDeCourage), PersoFort (nom, ptsDeForce) {}
- 
-// 	string getNom() { return this->nom; }
-// };
-
-DiamondTrap::DiamondTrap(std::string name) : _name(name)//, FlagTrap::_hit_points(50), ScavTrap::_energy_points(100), FlagTrap::_attack_damage(30)
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name")
 {
-	ClapTrap::_name = name + "_clap_name";
+	_name = name;
 	_hit_points = 50;
 	_energy_points = 100;
 	_attack_damage = 30;
