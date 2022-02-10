@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 17:12:47 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/09 20:23:28 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/10 13:13:07 by tinaserra        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ ClapTrap::ClapTrap(ClapTrap const & rhs)
 /* DESTRUCTOR                                                                 */
 /* -------------------------------------------------------------------------- */
 
-ClapTrap::~ClapTrap(void) {
+ClapTrap::~ClapTrap(void)
+{
 	std::cout << _name << ": is being destructed !" << std::endl;
 }
 
@@ -93,7 +94,12 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		std::cout << "ClapTrap " << _name << " havn't enought energy point" << std::endl;
 		return ;
 	}
-	if (amount >= _hit_points || amount > 75892)
+	if (amount <= 0 || amount >= 2147483648)
+	{
+		std::cout << "ClapTrap " << _name << " take damage causing 0 points of damage.. Total HP: " << _hit_points << std::endl;
+		return ;
+	}
+	if (amount >= _hit_points || amount > 50000)
 	{
 		_hit_points = 0;
 		_energy_points--;
@@ -103,24 +109,27 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	}
 	_energy_points--;
 	_hit_points -= amount;
-	std::cout << "ClapTrap " << _name << " take damage causing " << amount << " points of damage.";
+	std::cout << "ClapTrap " << _name << " take damage causing " << amount << " points of damage. ";
 	std::cout << " Total HP: " << _hit_points << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	if (amount <= 0)
+	if (amount <= 0 || amount >= 2147483648)
+	{
+		std::cout << "ClapTrap " << _name << " earned 0 hit points. Total HP: " << _hit_points << std::endl;
 		return ;
+	}
 	if (_energy_points <= 0)
 	{
 		std::cout << "ClapTrap " << _name << " havn't enought energy point" << std::endl;
 		return ;
 	}
 	_energy_points--;
-	if (amount > 75892)
+	if (amount > 50000)
 	{
-		_hit_points = 75892;
-		std::cout << "ClapTrap " << _name << " earned 75892 hit points. ";
+		_hit_points = 50000;
+		std::cout << "ClapTrap " << _name << " earned 50000 hit points. ";
 	}
 	else
 	{
