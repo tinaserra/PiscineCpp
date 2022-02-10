@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 21:41:07 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/09 21:41:19 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/10 16:42:47 by tinaserra        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,40 +20,34 @@
 
 int main(void)
 {
-	std::cout << std::endl << "------------- CREATION -------------" << std::endl;
-	Animal			*animal = new Animal();
-	Animal			*dog = new Dog();
-	Animal			*cat = new Cat();
-	WrongAnimal 	*wrongAnimal = new WrongAnimal();
-	WrongAnimal 	*wrongCat = new WrongCat();
+	std::cout << std::endl << "*" << "\033[1;34m Constructors \033[0m------------------- *" << std::endl;
+	const Animal		*animal = new Animal();
+	const Animal		*dog = new Dog();
+	const Animal		*cat = new Cat();
+	const WrongAnimal	*wrongAnimal = new WrongAnimal();
+	const WrongAnimal	*wrongCat = new WrongCat();
 
-	std::cout << std::endl << "-------------- ANIMAL --------------" << std::endl;
-	std::cout << "Animal type: " << animal->getType() << std::endl;
-	std::cout << "Animal sound: ";
+	std::cout << std::endl << "*" << "\033[1;32m Animal \033[0m------------------------- *" << std::endl;
+	std::cout << "Type: " << animal->getType() << std::endl;
 	animal->makeSound();
 
-	std::cout << std::endl << "--------------- CAT ----------------" << std::endl;
-	std::cout << "Cat type: " << cat->getType() << std::endl;
-	std::cout << "Cat sound: ";
+	std::cout << std::endl << "*" << "\033[1;32m Cat \033[0m---------------------------- *" << std::endl;
+	std::cout << "Type: " << cat->getType() << std::endl;
 	cat->makeSound();
 
-	std::cout << std::endl << "--------------- DOG ----------------" << std::endl;
-	std::cout << "Dog type: " << dog->getType() << std::endl;
-	std::cout << "Dog sound: ";
+	std::cout << std::endl << "*" << "\033[1;32m Dog \033[0m---------------------------- *" << std::endl;
+	std::cout << "Type: " << dog->getType() << std::endl;
 	dog->makeSound();
 
-	std::cout << std::endl << "----------- WRONG ANIMAL -----------" << std::endl;
-	std::cout << "Wrong animal type: " << wrongAnimal->getType() << std::endl;
-	std::cout << "Wrong animal sound: ";
+	std::cout << std::endl << "*" << "\033[1;32m WrongAnimal \033[0m-------------------- *" << std::endl;
+	std::cout << "Type: " << wrongAnimal->getType() << std::endl;
 	wrongAnimal->makeSound();
 
-	std::cout << std::endl << "------------- WRONG CAT ------------" << std::endl;
-	std::cout << "Wrong cat type: " << wrongCat->getType() << std::endl;
-	std::cout << "Wrong cat sound: ";
+	std::cout << std::endl << "*" << "\033[1;32m WrongCat \033[0m----------------------- *" << std::endl;
+	std::cout << "Type: " << wrongCat->getType() << std::endl;
 	wrongCat->makeSound();
 
-	std::cout << std::endl << "-------------- DELETE --------------" << std::endl;
-	delete animal;
+	std::cout << std::endl << "*" << "\033[1;34m Destructors \033[0m-------------------- *" << std::endl;	delete animal;
 	delete dog;
 	delete cat;
 	delete wrongAnimal;
