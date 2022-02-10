@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 17:14:10 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/09 20:07:23 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/10 13:36:44 by tinaserra        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int main()
 	p1.beRepaired(10);
 	p1.beRepaired(0);
 	p1.beRepaired(-1);
+	p1.beRepaired(-2147483648);
 	p1.beRepaired(1256551565);
 	p1.whoAmI();
 

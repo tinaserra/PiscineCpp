@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 18:37:30 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/09 23:18:56 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/10 11:25:20 by tinaserra        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class DiamondTrap : public ScavTrap, public FragTrap
 {
 	public:
 		DiamondTrap(void);
-		DiamondTrap(std::string name); //, unsigned int hit_points, unsigned int energy_points, unsigned int attack_damage);
+		DiamondTrap(std::string name);
 		DiamondTrap(DiamondTrap const & ref);
 		~DiamondTrap(void);
 		

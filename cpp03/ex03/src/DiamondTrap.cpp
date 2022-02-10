@@ -3,14 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 18:50:56 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/09 20:26:28 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/10 13:34:53 by tinaserra        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
+
+/*
+ * _hit_points = FragTrap::_hit_points;
+ * _energy_points = ScavTrap::_energy_points;
+ * _attack_damage = FragTrap::_attack_damage;
+*/
 
 /* -------------------------------------------------------------------------- */
 /* CONSTRUCTORS                                                               */
@@ -24,8 +30,8 @@ DiamondTrap::DiamondTrap()
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name")
 {
 	_name = name;
-	_hit_points = 50;
-	_energy_points = 100;
+	_hit_points = 100;
+	_energy_points = 50;
 	_attack_damage = 30;
 
 	std::cout << "\033[1m[DiamondTrap]\033[0m Name constructor called: " << _name << std::endl;
