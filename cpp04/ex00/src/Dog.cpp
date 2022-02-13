@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 22:17:55 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/09 22:18:43 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/10 17:30:16 by tinaserra        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ Dog::Dog()
 	std::cout << "\033[1m[Dog]\033[0m Default constructor called: " << _type << std::endl;
 }
 
-Dog::Dog(Dog const & ref)
+Dog::Dog(Dog const & rhs)
 {
 	std::cout << "\033[1m[Dog]\033[0m Copy constructor called" << std::endl;
-	_type = ref._type;
+	_type = rhs._type;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -51,10 +51,10 @@ void	Dog::makeSound(void) const
 /* OPERATORS                                                                  */
 /* -------------------------------------------------------------------------- */
 
-Dog	&Dog::operator=(Dog const & ref)
+Dog	&Dog::operator=(Dog const & rhs)
 {
 	std::cout << "\033[1m[Dog]\033[0m Assignation operator called" << std::endl;
-	_type = ref._type;
+	_type = rhs._type;
 
 	return (*this);
 }

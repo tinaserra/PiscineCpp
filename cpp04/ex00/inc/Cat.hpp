@@ -6,7 +6,7 @@
 /*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 21:48:01 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/10 14:41:42 by tinaserra        ###   ########.fr       */
+/*   Updated: 2022/02/10 17:30:16 by tinaserra        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ class Cat : public Animal
 	public:
 		Cat(void);
 		~Cat(void);
-		Cat(Cat const & ref);
+		Cat(Cat const & rhs);
 		
-		Cat	&operator=(Cat const & ref);
+		Cat	&operator=(Cat const & rhs);
 		void	makeSound(void) const;
 };
 

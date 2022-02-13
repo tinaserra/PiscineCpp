@@ -6,7 +6,7 @@
 /*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 13:40:29 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/10 13:41:03 by tinaserra        ###   ########.fr       */
+/*   Updated: 2022/02/10 17:30:16 by tinaserra        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ WrongAnimal::WrongAnimal(void) : _type("WrongAnimal")
 	std::cout << "\033[1m[WrongAnimal]\033[0m Default constructor called: " << _type << std::endl;
 }
 
-WrongAnimal::WrongAnimal(WrongAnimal const & ref)
+WrongAnimal::WrongAnimal(WrongAnimal const & rhs)
 {
 	std::cout << "\033[1m[WrongAnimal]\033[0m Copy constructor called" << std::endl;
-	_type = ref._type;
+	_type = rhs._type;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -59,10 +59,10 @@ void	WrongAnimal::makeSound(void) const
 /* OPERATORS                                                                  */
 /* -------------------------------------------------------------------------- */
 
-WrongAnimal	&WrongAnimal::operator=(WrongAnimal const & ref)
+WrongAnimal	&WrongAnimal::operator=(WrongAnimal const & rhs)
 {
 	std::cout << "\033[1m[WrongAnimal]\033[0m Assignation operator called" << std::endl;
-	_type = ref._type;
+	_type = rhs._type;
 
 	return (*this);
 }

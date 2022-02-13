@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 22:13:17 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/09 22:17:20 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/10 17:30:16 by tinaserra        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ Cat::Cat()
 	std::cout << "\033[1m[Cat]\033[0m Default constructor called: " << _type << std::endl;
 }
 
-Cat::Cat(Cat const & ref)
+Cat::Cat(Cat const & rhs)
 {
 	std::cout << "\033[1m[Cat]\033[0m Copy constructor called" << std::endl;
-	_type = ref._type;
+	_type = rhs._type;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -51,10 +51,10 @@ void	Cat::makeSound(void) const
 /* OPERATORS                                                                  */
 /* -------------------------------------------------------------------------- */
 
-Cat	&Cat::operator=(Cat const & ref)
+Cat	&Cat::operator=(Cat const & rhs)
 {
 	std::cout << "\033[1m[Cat]\033[0m Assignation operator called" << std::endl;
-	_type = ref._type;
+	_type = rhs._type;
 
 	return (*this);
 }
