@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 15:38:43 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/04 23:47:29 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/13 12:45:22 by tinaserra        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Fixed
 		Fixed(); // Constructeur par défaut
 		Fixed(int const nb);
 		Fixed(float const flo);
-		Fixed(Fixed const &ref); // Constructeur de recopie
+		Fixed(Fixed const &rhs); // Constructeur de recopie
 		~Fixed(); // Destructeur
 
 		Fixed	&operator=(Fixed const &rhs); // Operator d'affectation

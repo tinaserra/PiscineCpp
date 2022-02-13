@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fixed.cpp                                          :+:      :+:    :+:   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 15:46:19 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/04 19:03:57 by tinaserra        ###   ########.fr       */
+/*   Updated: 2022/02/13 12:45:22 by tinaserra        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ Fixed::Fixed(void) : _nb(0)
 	std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::Fixed(Fixed const & ref)
+Fixed::Fixed(Fixed const & rhs)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	_nb = ref._nb;
+	_nb = rhs._nb;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -55,9 +55,9 @@ void	Fixed::setRawBits(int const raw)
 /* OPERATORS                                                                  */
 /* -------------------------------------------------------------------------- */
 
-Fixed	&Fixed::operator=(Fixed const & ref)
+Fixed	&Fixed::operator=(Fixed const & rhs)
 {
 	std::cout << "Assignation operator called" << std::endl;
-	_nb = ref.getRawBits();
+	_nb = rhs.getRawBits();
 	return (*this);
 }

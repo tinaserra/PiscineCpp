@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 15:46:19 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/04 23:41:34 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/13 12:45:22 by tinaserra        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ Fixed::Fixed(float const flo) : _nb((int)roundf(flo * (1 << _bits)))
 	// std::cout << "Float constructor called" << std::endl;
 }
 
-Fixed::Fixed(Fixed const & ref)
+Fixed::Fixed(Fixed const & rhs)
 {
 	// std::cout << "Copy constructor called" << std::endl;
-	_nb = ref._nb;
+	_nb = rhs._nb;
 }
 
 /* -------------------------------------------------------------------------- */
