@@ -6,7 +6,7 @@
 /*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 21:46:26 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/13 12:55:51 by tinaserra        ###   ########.fr       */
+/*   Updated: 2022/02/13 15:05:53 by tinaserra        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include <iostream>
 #include <string>
-// # include "Brain.hpp"
 
 class Animal
 {
@@ -28,7 +27,6 @@ class Animal
 
 		Animal			&operator=(Animal const & rhs);
 		virtual void	makeSound(void) const;
-		// Brain	*getBrain(void) cons;
 
 	protected:
 		std::string	_type;
