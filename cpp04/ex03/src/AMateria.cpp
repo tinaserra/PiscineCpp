@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
+/*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:27:59 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/14 20:13:18 by tinaserra        ###   ########.fr       */
+/*   Updated: 2022/02/15 21:17:01 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ std::string const &	AMateria::getType(void) const
 
 void		AMateria::use(ICharacter& target)
 {
-	std::cout << "Default use: Don't do anything to " << target.getName() << std::endl;
+	std::cout <<"\033[1m[AMateria]\033[0m use: Don't do anything to " << target.getName() << std::endl;
 	return ;
 }
 

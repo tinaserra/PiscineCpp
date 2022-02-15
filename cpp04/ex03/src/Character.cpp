@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
+/*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:28:21 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/14 20:22:45 by tinaserra        ###   ########.fr       */
+/*   Updated: 2022/02/15 21:30:51 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Character.cpp"
+#include "Character.hpp"
 
 /* -------------------------------------------------------------------------- */
 /* CONSTRUCTORS                                                               */
@@ -68,10 +68,10 @@ void	Character::equip(AMateria* m)
 	}
 	for (int i = 0; i < 4; i++)
 	{
-		if (this->_inventory[i] == NULL)
+		if (_inventory[i] == NULL)
 		{
-			this->_inventory[i] = m;
-			std::cout << m->getType() << " has been added to " << this->_name << " inventory" << std::endl;
+			_inventory[i] = m;
+			std::cout << m->getType() << " has been added to " << _name << " inventory" << std::endl;
 			return ;
 		}
 	}
@@ -81,24 +81,24 @@ void	Character::equip(AMateria* m)
 
 void		Character::unequip(int idx)
 {
-	if (idx < 0 || idx > 3 || this->_inventory[idx] == NULL)
+	if (idx < 0 || idx > 3 || _inventory[idx] == NULL)
 	{
 		std::cout << "Nothing to unequip" << std::endl;
 		return ;
 	}
-	std::cout << this->_inventory[idx]->getType() << " has been removed to " << this->_name << " inventory" << std::endl;
-	this->_inventory[idx] = NULL;
+	std::cout << _inventory[idx]->getType() << " has been removed to " << _name << " inventory" << std::endl;
+	_inventory[idx] = NULL;
 	return ;
 }
 
 void		Character::use(int idx, ICharacter& target)
 {
-	if (idx < 0 || idx > 3 || this->_inventory[idx] == NULL)
+	if (idx < 0 || idx > 3 || _inventory[idx] == NULL)
 	{
 		std::cout << "Invalid AMateria to use" << std::endl;
 		return ;
 	}
-	this->_inventory[idx]->use(target);
+	_inventory[idx]->use(target);
 	return ;
 }
 
@@ -106,23 +106,23 @@ void		Character::use(int idx, ICharacter& target)
 /* OPERATORS                                                                  */
 /* -------------------------------------------------------------------------- */
 
-Character &	Character::operator=(Character const & rhs)
+Character	&Character::operator=(Character const & rhs)
 {
 	for (int i = 0; i < 4; i++)
 	{
-		if (this->_inventory[i] != NULL)
+		if (_inventory[i] != NULL)
 		{
-			delete this->_inventory[i];
-			this->_inventory[i] = NULL;
+			delete _inventory[i];
+			_inventory[i] = NULL;
 		}
 	}
-	this->_name = rhs.getName();
-	for (int i = 0; i < 4; i++;
+	_name = rhs.getName();
+	for (int i = 0; i < 4; i++)
 	{
 		if (rhs._inventory[i] != NULL)
-			this->equip(rhs._inventory[i]->clone());
+			equip(rhs._inventory[i]->clone());
 		else
-			this->_inventory[i] = NULL;
+			_inventory[i] = NULL;
 	}
 	return (*this);
 }

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+         #
+#    By: vserra <vserra@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/07 17:06:30 by tinaserra         #+#    #+#              #
-#    Updated: 2022/02/14 15:28:34 by tinaserra        ###   ########.fr        #
+#    Updated: 2022/02/15 21:34:44 by vserra           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRC = AMateria.cpp \
 	  Ice.cpp \
 	  main.cpp
 
-NAME = AAnimal
+NAME = Character
 
 # override -> permet de reecrire la suite de la variable
 override CXXFLAGS += -std=c++98 -Wall -Wextra -Werror -MMD

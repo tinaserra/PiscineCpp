@@ -3,32 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
+/*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:32:14 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/14 16:01:10 by tinaserra        ###   ########.fr       */
+/*   Updated: 2022/02/15 21:02:11 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MATERIASOURCE_HPP
-# define MATERIASOURCE_HPP
+#ifndef IMATERIASOURCE_HPP
+# define IMATERIASOURCE_HPP
 
 # include <iostream>
-# include "IMateriaSource.hpp"
+# include "AMateria.hpp"
 
-class MateriaSource : public IMateriaSource
+class IMateriaSource
 {
 	public:
-		MateriaSource(void);
-		MateriaSource(MateriaSource const & src);
-		~MateriaSource(void);
-		MateriaSource		&operator=(MateriaSource const & rhs);
-		
-		void				learnMateria(AMateria *toLearn);
-		AMateria *			createMateria(std::string const & type);
-
-	private:
-		AMateria *_materias[4];
+		virtual ~IMateriaSource() {}
+		virtual void learnMateria(AMateria *) = 0;
+		virtual AMateria *createMateria(std::string const & type) = 0;
 };
 
 #endif
