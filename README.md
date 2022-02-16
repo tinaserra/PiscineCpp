@@ -147,3 +147,13 @@ c'est le pointeur `this` qui pointe sur l'instance courrante de cette classe.
 this->foo = 21;
 this->bar(); // on peut appeler une fonction membre a l'aide du pointeur this
 ```
+
+### fonctions membres virtuelles
+
+Le mot-clé ```virtual``` permet de supplanter une fonction membre d'une classe parent depuis une classe dérivée.</br> 
+
+L'appel à une **fonction membre virtuel** n'est au contraire pas déterminé à la compilation, mais lors de **l'exécution**.</br> 
+Le fait que A::F2() soit déclarée virtual et supplantée par B::F2() signifie qu'à chaque appel de F2(), le compilateur va tester le type réel de l'objet afin d'appeler B::F2() si possible. Sinon, il appellera A::F2().</br> 
+On parle alors de liaison **dynamique** (dynamic binding en anglais) par opposition à la liaison **statique** faite lors de l'édition de liens.
+
+[En savoir plus](https://cpp.developpez.com/faq/cpp/?page=Les-fonctions-membres-virtuelles)
