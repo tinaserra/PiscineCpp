@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:27:56 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/15 21:28:48 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/16 13:29:13 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,15 @@
 
 MateriaSource::MateriaSource(void)
 {
+	std::cout << "\033[1m[MateriaSource]\033[0m Default constructor called" << std::endl;
 	for (int i = 0; i < 4; i++)
 		_materias[i] = NULL;
-	return ;
 }
 
 MateriaSource::MateriaSource(MateriaSource const & src)
 {
+	std::cout << "\033[1m[MateriaSource]\033[0m Copy constructor called" << std::endl;
 	*this = src;
-	return ;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -35,12 +35,12 @@ MateriaSource::MateriaSource(MateriaSource const & src)
 
 MateriaSource::~MateriaSource(void)
 {
+	std::cout << "\033[1m[MateriaSource]\033[0m Destructor called" << std::endl;
 	for (int i = 0; i < 4; i++)
 	{
 		if (_materias[i] != NULL)
 			delete _materias[i];
 	}
-	return ;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -87,10 +87,14 @@ AMateria	*MateriaSource::createMateria(std::string const & type)
 
 MateriaSource	&MateriaSource::operator=(MateriaSource const & rhs)
 {
-	for (int i = 0; i < 4; i++)
+	std::cout << "\033[1m[MateriaSource]\033[0m Assignation operator called" << std::endl;
+	if (this != &rhs)
 	{
-		if (rhs._materias[i] != NULL)
-			_materias[i] = rhs._materias[i]->clone();
+		for (int i = 0; i < 4; i++)
+		{
+			if (rhs._materias[i] != NULL)
+				_materias[i] = rhs._materias[i]->clone();
+		}
 	}
 	return (*this);
 }

@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:28:21 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/15 21:30:51 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/16 13:28:41 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,23 @@
 /* CONSTRUCTORS                                                               */
 /* -------------------------------------------------------------------------- */
 
-Character::Character(void) : _name("Character")
+Character::Character(void) : _name("null")
 {
+	std::cout << "\033[1m[Character]\033[0m Default constructor called" << std::endl;
 	for (int i = 0; i < 4; i++)
 		_inventory[i] = NULL;
 }
 
 Character::Character(std::string name) : _name(name)
 {
+	std::cout << "\033[1m[Character]\033[0m Name constructor called: " << _name << std::endl;
 	for (int i = 0; i < 4; i++)
 		_inventory[i] = NULL;
 }
 
 Character::Character(Character const & src)
 {
+	std::cout << "\033[1m[Character]\033[0m Copy constructor called" << std::endl;
 	*this = src;
 }
 
@@ -39,6 +42,7 @@ Character::Character(Character const & src)
 
 Character::~Character(void)
 {
+	std::cout << "\033[1m[Character]\033[0m Destructor called" << std::endl;
 	for (int i = 0; i < 4; i++)
 	{
 		if (_inventory[i] != NULL)
@@ -108,21 +112,25 @@ void		Character::use(int idx, ICharacter& target)
 
 Character	&Character::operator=(Character const & rhs)
 {
-	for (int i = 0; i < 4; i++)
+	std::cout << "\033[1m[Character]\033[0m Assignation operator called" << std::endl;
+	if (this != &rhs)
 	{
-		if (_inventory[i] != NULL)
+		for (int i = 0; i < 4; i++)
 		{
-			delete _inventory[i];
-			_inventory[i] = NULL;
+			if (_inventory[i] != NULL)
+			{
+				delete _inventory[i];
+				_inventory[i] = NULL;
+			}
 		}
-	}
-	_name = rhs.getName();
-	for (int i = 0; i < 4; i++)
-	{
-		if (rhs._inventory[i] != NULL)
-			equip(rhs._inventory[i]->clone());
-		else
-			_inventory[i] = NULL;
+		_name = rhs.getName();
+		for (int i = 0; i < 4; i++)
+		{
+			if (rhs._inventory[i] != NULL)
+				equip(rhs._inventory[i]->clone());
+			else
+				_inventory[i] = NULL;
+		}
 	}
 	return (*this);
 }

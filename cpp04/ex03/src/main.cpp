@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:29:29 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/15 21:50:24 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/16 13:43:03 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,55 +18,58 @@
 
 int	main()
 {
+	std::cout << std::endl << "* \033[32mMateriaSource\033[0m --------- *" << std::endl;
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
-	ICharacter* me = new Character("me");
-	AMateria* tmp;
-	tmp = src->createMateria("ice");
-	me->equip(tmp);
-	tmp = src->createMateria("cure");
-	me->equip(tmp);
-	ICharacter* bob = new Character("bob");
+
+	std::cout << std::endl << "* \033[32mAMateria\033[0m -------------- *" << std::endl;
+	AMateria* tmp_ice;
+	tmp_ice = src->createMateria("ice");
+	AMateria* tmp_cure;
+	tmp_cure = src->createMateria("cure");
+	// AMateria* tmp3;
+	// tmp3 = src->createMateria("cure");
+	// AMateria* tmp4;
+	// tmp4 = src->createMateria("cure");
+	// AMateria* tmp5;
+	// tmp5 = src->createMateria("cure");
+
+	std::cout << std::endl << "* \033[32mICharacter\033[0m ------------ *" << std::endl;
+	ICharacter* me = new Character("\033[34mme\033[0m");
+	ICharacter* bob = new Character("\033[33mbob\033[0m");
+	me->equip(tmp_ice);
+	me->equip(tmp_cure);
+	// me->equip(tmp3);
+	// me->equip(tmp4);
+	// me->equip(tmp5);
 	me->use(0, *bob);
 	me->use(1, *bob);
-	
-	std::cout << std::endl;
-	
-	Character *newMe = new Character("newMe");
-	newMe->equip(tmp->clone());
-	*newMe = *static_cast<Character *>(me);
-	std::cout << "newMe name = " << newMe->getName() << std::endl;
-	newMe->use(0, *bob);
-	newMe->use(1, *me);
-	newMe->use(2, *bob);
-	src->learnMateria(new Ice());
-	src->learnMateria(new Cure());
-	tmp = src->createMateria("ice");
-	newMe->equip(tmp);
-	tmp = src->createMateria("cure");
-	newMe->equip(tmp);
-	tmp = new Cure;
-	newMe->equip(tmp);
-	delete tmp;
+
+	std::cout << std::endl << "* \033[32mDestructors\033[0m ----------- *" << std::endl;
 	delete bob;
 	delete me;
 	delete src;
-	delete newMe;
 
-	std::cout << std::endl;
+	std::cout << std::endl << "* \033[32mAMateria\033[0m ------------- *" << std::endl;
+	AMateria *tab = new Ice[4];
 
-	AMateria *	tab = new Ice[4];
-	Character	toto("toto");
-	toto.equip(&tab[0]);
-	toto.equip(&tab[1]);
-	toto.equip(&tab[2]);
-	toto.equip(&tab[3]);
-	toto.unequip(0);
-	toto.unequip(1);
-	toto.unequip(2);
-	toto.unequip(3);
-	toto.unequip(0);
+	std::cout << std::endl << "* \033[32mCharacter\033[0m ------------- *" << std::endl;
+	Character mireille("\033[34mmireille\033[0m");
+	Character matthieu("\033[33mmathieu\033[0m");
+	mireille.equip(&tab[0]);
+	mireille.equip(&tab[1]);
+	mireille.equip(&tab[2]);
+	mireille.equip(&tab[3]);
+	mireille.unequip(0);
+	mireille.unequip(1);
+	mireille.unequip(2);
+	mireille.unequip(3);
+	mireille.unequip(0);
+	mireille.use(0, matthieu);
+	mireille.use(1, matthieu);
+
+	std::cout << std::endl << "* \033[32mDestructors\033[0m ----------- *" << std::endl;
 	delete [] tab;
 	
 	return (0);

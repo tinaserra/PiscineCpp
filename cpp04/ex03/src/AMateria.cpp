@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:27:59 by tinaserra         #+#    #+#             */
-/*   Updated: 2022/02/15 21:17:01 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/16 13:28:13 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,19 @@
 /* CONSTRUCTORS                                                               */
 /* -------------------------------------------------------------------------- */
 
-AMateria::AMateria(void) : _type("Undefined")
+AMateria::AMateria(void) : _type("null")
 {
+	std::cout << "\033[1m[AMateria]\033[0m Default constructor called" << std::endl;
 }
 
 AMateria::AMateria(std::string const & type) : _type(type)
 {
+	std::cout << "\033[1m[AMateria]\033[0m Type constructor called: " << _type << std::endl;
 }
 
 AMateria::AMateria(AMateria const & rhs)
 {
+	std::cout << "\033[1m[AMateria]\033[0m Copy constructor called" << std::endl;
 	*this = rhs;
 }
 
@@ -35,6 +38,7 @@ AMateria::AMateria(AMateria const & rhs)
 
 AMateria::~AMateria(void)
 {
+	std::cout << "\033[1m[AMatera]\033[0m Destructor called" << std::endl;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -62,6 +66,8 @@ void		AMateria::use(ICharacter& target)
 
 AMateria	&AMateria::operator=(AMateria const & rhs)
 {
-	_type = rhs.getType();
+	std::cout << "\033[1m[AMateria]\033[0m Assignation operator called" << std::endl;
+	if (this != &rhs)
+		_type = rhs.getType();
 	return (*this);
 }
