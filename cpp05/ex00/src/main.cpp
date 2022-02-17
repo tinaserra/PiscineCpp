@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 23:12:56 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/16 23:13:26 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/17 17:12:27 by tinaserra        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,56 +15,56 @@
 int	main()
 {
 	{
-		Bureaucrat low("low", 150);
+		Bureaucrat matthieu("\033[33mMatthieu\033[0m", 150);
 		try
 		{
-			low.decreaseGrade();
-			std::cout << low << std::endl;	// cette ligne ne va pas etre executee car il y a l'exception gradeTooLowException
+			matthieu.decreaseGrade();
+			std::cout << matthieu << std::endl;
 		}
 		catch (const std::exception &e)
 		{
 			std::cerr << e.what() << std::endl;
-			std::cout << low << std::endl;
+			std::cout << matthieu << std::endl;
 		}
-	
+
 		try
 		{
-			low.increaseGrade();
-			std::cout << low << std::endl;
+			matthieu.increaseGrade();
+			std::cout << matthieu << std::endl;
 		}
-		catch (const std::exception &e)		//	ici rien a ete "catch"
+		catch (const std::exception &e)
 		{
 			std::cerr << e.what() << std::endl;
-			std::cout << low << std::endl;
+			std::cout << matthieu << std::endl;
 		}
-		std::cout << std::endl;
 	}
 
+	std::cout << std::endl;
 	{
-		Bureaucrat high("high", 1);
+		Bureaucrat mireille("\033[34mMireille\033[0m", 1);
 		try
 		{
-			high.increaseGrade();
-			std::cout << high << std::endl;	// cette ligne ne va pas etre executee car il y a l'exception gradeTooHighException
+			mireille.increaseGrade();
+			std::cout << mireille << std::endl;
 		}
 		catch (const std::exception &e)
 		{
 			std::cerr << e.what() << std::endl;
-			std::cout << high << std::endl;
+			std::cout << mireille << std::endl;
 		}
-	
+
 		try
 		{
-			high.decreaseGrade();
-			std::cout << high << std::endl;
+			mireille.decreaseGrade();
+			std::cout << mireille << std::endl;
 		}
-		catch (const std::exception &e)		//	ici rien a ete "catch"
+		catch (const std::exception &e)
 		{
 			std::cerr << e.what() << std::endl;
-			std::cout << high << std::endl;
+			std::cout << mireille << std::endl;
 		}
-		std::cout << std::endl;
 	}
+	std::cout << std::endl;
 
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 20:54:55 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/16 23:11:54 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/17 13:09:14 by tinaserra        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Bureaucrat::Bureaucrat(void) : _name("")
 
 Bureaucrat::Bureaucrat(std::string name, unsigned int grade) : _name(name), _grade(grade)
 {
-	std::cout << str << " Name constructor called" << std::endl;
+	std::cout << str << " Name constructor called: " << _name << std::endl;
 }
 
 Bureaucrat::Bureaucrat(Bureaucrat const & save) : _name(save._name)
@@ -83,7 +83,7 @@ void	Bureaucrat::decreaseGrade(void)
 
 Bureaucrat	&Bureaucrat::operator=(Bureaucrat const & rsh)
 {
-	// on ne eut pas initialiser name parce qu'il est const
+	// on ne peut pas initialiser name parce qu'il est const
 	// _name = rsh.getName();
 	_grade = rsh.getGrade();
 	return (*this);
