@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 20:17:12 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/17 20:47:28 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/18 13:44:03 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,14 @@ Form::Form(void) : _statut(false), _name(""), _signGrade(150), _execGrade(150)
 	std::cout << str << " Default constructor called" << std::endl;
 }
 
-Form::Form(std::string const name, unsigned int signGrade, unsigned int execGrade)
-		: _statut(false), _name(name), _signGrade(signGrade), _execGrade(execGrade)
+Form::Form(std::string const name, int signGrade, int execGrade)
+		: _statut(false), _name(name) , _signGrade(signGrade), _execGrade(execGrade)
 {
 	std::cout << str << " Name constructor called: " << _name << std::endl;
+	if (_signGrade < 1 || _execGrade < 1)
+		throw Form::GradeTooHighException();
+	if (_signGrade > 150 || _execGrade > 150)
+		throw Form::GradeTooLowException();
 }
 
 Form::Form(Form const & save) : _statut(save._statut), _name(save._name), _signGrade(save._signGrade), _execGrade(save._execGrade)
@@ -44,7 +48,7 @@ Form::Form(Form const & save) : _statut(save._statut), _name(save._name), _signG
 
 Form::~Form(void)
 {
-	std::cout << str << " Destructor called" << std::endl;
+	std::cout << str << " Destructor called: " << _name << std::endl;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -61,12 +65,12 @@ bool	Form::getSigned(void) const
 	return (_statut);
 }
 
-unsigned int	Form::getSignGrade(void) const
+int	Form::getSignGrade(void) const
 {
 	return (_signGrade);
 }
 
-unsigned int	Form::getExecGrade(void) const
+int	Form::getExecGrade(void) const
 {
 	return (_execGrade);
 }
@@ -79,8 +83,8 @@ void	Form::beSigned(Bureaucrat const & b)
 {
 	if (b.getGrade() > _signGrade)
 		throw Form::GradeTooLowException();
-	else if (_statut)
-		std::cout << "Form " << _name << " is already signed." << std::endl;
+	// else if (_statut)
+	// 	std::cout << "Form " << _name << " is already signed." << std::endl;
 	else
 		_statut = true;
 	return ;
@@ -98,12 +102,13 @@ Form	&Form::operator=(Form const & rhs)
 
 std::ostream	&operator<<(std::ostream & o, Form const & rhs)
 {
-	o << "Form " << rhs.getName();
+	o << "Form " << rhs.getName() << std::endl;
+	o << "Statut: ";
 	if (rhs.getSigned())
-		o << " is signed.";
+		o << "signed | ";
 	else
-		o << " is not signed.";
-	o	<< " Grade required for signature: " << rhs.getSignGrade() << "."
-		<< " Grade required for execution: " << rhs.getExecGrade() << ".";
+		o << "not signed | ";
+	o << "Grade signature: " << rhs.getSignGrade() << " | ";
+	o << "Grade execution: " << rhs.getExecGrade() << std::endl;
 	return (o);
 }

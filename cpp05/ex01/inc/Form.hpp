@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 19:55:36 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/17 20:35:08 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/18 13:41:05 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ class	Form
 {
 	public:
 		Form(void);
-		Form(std::string const name, unsigned int signGrade, unsigned int execGrade);
+		Form(std::string const name, int signGrade, int execGrade);
 		Form(Form const & save);
 		virtual ~Form(void);
 
 		std::string const	getName(void) const;
 		bool				getSigned(void) const;
-		unsigned int		getSignGrade(void) const;
-		unsigned int		getExecGrade(void) const;
+		int		getSignGrade(void) const;
+		int		getExecGrade(void) const;
 
 		Form				&operator=(Form const & rhs);
 
@@ -55,10 +55,8 @@ class	Form
 	private:
 		bool				_statut;
 		std::string const	_name;
-		unsigned int const	_signGrade;
-		unsigned int const	_execGrade;
-		
-		
+		int const			_signGrade;
+		int const			_execGrade;
 };
 
 std::ostream	&operator<<(std::ostream & o, Form const & rhs);

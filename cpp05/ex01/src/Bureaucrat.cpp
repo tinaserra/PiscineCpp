@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 20:54:55 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/17 21:23:01 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/18 13:32:38 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Bureaucrat::Bureaucrat(void) : _name("")
 	std::cout << str << " Default constructor called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string name, unsigned int grade) : _name(name), _grade(grade)
+Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade)
 {
 	std::cout << str << " Name constructor called: " << _name << std::endl;
 }
@@ -40,7 +40,7 @@ Bureaucrat::Bureaucrat(Bureaucrat const & save) : _name(save._name)
 
 Bureaucrat::~Bureaucrat(void)
 {
-	std::cout << str << " Destructor called" << std::endl;
+	std::cout << str << " Destructor called: " << _name << std::endl;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -52,7 +52,7 @@ std::string const	Bureaucrat::getName(void) const
 	return (_name);
 }
 
-unsigned int	Bureaucrat::getGrade(void) const
+int	Bureaucrat::getGrade(void) const
 {
 	return (_grade);
 }
