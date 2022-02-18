@@ -65,10 +65,10 @@ enRouge='\033[31m'
 enVert='\033[32m'
 enNoir='\033[30m'
 
-enGras='033[1m'
-enSouligne='033[4m'
-enClignotant='033[5m'
-enSurligne='033[7m'
+enGras='\033[1m'
+enSouligne='\033[4m'
+enClignotant='\033[5m'
+enSurligne='\033[7m'
 
 enDefaut='\033[0m'
 ```
