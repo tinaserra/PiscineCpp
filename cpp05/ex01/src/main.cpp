@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 23:12:56 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/18 14:48:04 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/18 14:52:40 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ int	main()
 	Form sebastian("*SV01*", 50, 150);
 	Form socon("*SO31*", 50, 150);
 	Form romain("*RG08*", 50, 150);
-		Form max("*MV33*", 0, 150);
-		Form carlos("*CS55*", -1, 150);
-		Form sergio("*SP11*", 151, 150);
+	Form max = Form();
+	Form carlos = Form();
+	Form sergio = Form();
 	try
 	{
-		Form max(&max, 0, 150);
-		Form carlos(&carlos, -1, 150);
-		Form sergio(&sergio, 151, 150);
+		max = Form("*MV33*", 0, 150);
+		carlos = Form("*CS55*", -1, 150);
+		sergio =Form("*SP11*", 151, 150);
 	}
 	catch (const std::exception &e)
 	{
