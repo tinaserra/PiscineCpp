@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 20:17:12 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/18 13:44:03 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/18 14:46:48 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ Form::Form(std::string const name, int signGrade, int execGrade)
 		: _statut(false), _name(name) , _signGrade(signGrade), _execGrade(execGrade)
 {
 	std::cout << str << " Name constructor called: " << _name << std::endl;
-	if (_signGrade < 1 || _execGrade < 1)
-		throw Form::GradeTooHighException();
-	if (_signGrade > 150 || _execGrade > 150)
-		throw Form::GradeTooLowException();
+	// if (_signGrade < 1 || _execGrade < 1)
+	// 	throw Form::GradeTooHighException();
+	// if (_signGrade > 150 || _execGrade > 150)
+	// 	throw Form::GradeTooLowException();
 }
 
 Form::Form(Form const & save) : _statut(save._statut), _name(save._name), _signGrade(save._signGrade), _execGrade(save._execGrade)
