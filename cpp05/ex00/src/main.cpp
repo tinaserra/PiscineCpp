@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 23:12:56 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/17 21:38:03 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/18 15:52:07 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int	main()
 {
+	std::cout << std::endl;
 	{
 		Bureaucrat matthieu("\033[33mMatthieu\033[0m", 150);
 		try
@@ -62,6 +63,28 @@ int	main()
 		{
 			std::cerr << e.what() << std::endl;
 			std::cout << mireille << std::endl;
+		}
+	}
+
+	{
+		std::cout << std::endl << "*" << "\033[1;31m Exceptions \033[0m--------------- *" << std::endl;
+		Bureaucrat toto = Bureaucrat();
+		Bureaucrat mick = Bureaucrat();
+		try
+		{
+			toto = Bureaucrat("\033[31mToto Wolf\033[0m", 0);
+		}
+		catch (const std::exception &e)
+		{
+			std::cerr << e.what() << std::endl;
+		}
+		try
+		{
+			mick = Bureaucrat("\033[31mMichael Masi\033[0m", 151);
+		}
+		catch (const std::exception &e)
+		{
+			std::cerr << e.what() << std::endl;
 		}
 	}
 	std::cout << std::endl;
