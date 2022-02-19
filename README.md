@@ -1,6 +1,10 @@
 # cpp
 Cpp modules from 42
 
+<!-- ## Sommaire
+
+1.  -->
+
 ## Sujets & scale de correction
 
 * cpp00 - [sujet pdf](https://github.com/tinaserra/cpp/blob/main/links/cpp00_fr.subject.pdf) | [scale](https://github.com/tinaserra/cpp/blob/main/links/scale_cpp00.pdf)
@@ -32,28 +36,20 @@ Cpp modules from 42
 
 ## Progression
 
-1. cpp00 ✅
-- [x] ex00
-- [x] ex01
-- [x] ex02
-2. cpp01 ✅
-- [x] ex00
-- [x] ex01
-- [x] ex02
-- [x] ex03
-- [x] ex04
-- [x] ex05
-- [x] ex06
-3. cpp02
+- [x] cpp00 ✅
+- [x] cpp01 ✅
+- [x] cpp02 ✅
+- [x] cpp03 ✅
+- [x] cpp04 ✅
+- [ ] cpp05
 - [x] ex00
 - [x] ex01
 - [x] ex02
 - [ ] ex03
-3. cpp03
-- [x] ex00
-- [x] ex01
-- [x] ex02
-- [ ] ex03
+- [ ] cpp06
+- [ ] cpp07
+- [ ] cpp08
+
 
 
 ## Les couleurs
