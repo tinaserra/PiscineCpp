@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 20:54:55 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/18 18:26:59 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/19 15:52:16 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,8 @@ void	Bureaucrat::signForm(AForm &form)
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << _name << " couldn’t sign " << form.getName() << " because: " << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
+		std::cerr << _name << " couldn’t sign " << form.getName() << std::endl;
 	}
 	return ;
 }

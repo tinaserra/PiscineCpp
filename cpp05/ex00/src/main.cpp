@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 23:12:56 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/18 15:52:07 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/19 15:47:32 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int	main()
 		Bureaucrat mick = Bureaucrat();
 		try
 		{
-			toto = Bureaucrat("\033[31mToto Wolf\033[0m", 0);
+			toto = Bureaucrat("\033[1mToto Wolf\033[0m", 0);
 		}
 		catch (const std::exception &e)
 		{
@@ -80,7 +80,7 @@ int	main()
 		}
 		try
 		{
-			mick = Bureaucrat("\033[31mMichael Masi\033[0m", 151);
+			mick = Bureaucrat("\033[1mMichael Masi\033[0m", 151);
 		}
 		catch (const std::exception &e)
 		{

@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 20:36:25 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/18 18:28:44 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/19 15:46:01 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ class	Bureaucrat
 			public:
 				virtual const char* what() const throw()
 				{
-					return ("[Bureaucrat] Grade is too high !");
+					return ("\033[31mGrade is too high !\033[0m");
 				}
 		};
 
@@ -50,16 +50,7 @@ class	Bureaucrat
 			public:
 				virtual const char* what() const throw()
 				{
-					return ("[Bureaucrat] Grade is too low !");
-				}
-		};
-
-		class	CannotExecException : public std::exception
-		{
-			public:
-				virtual const char* what() const throw()
-				{
-					return ("[Bureaucrat] Can't execute !");
+					return ("\033[31mGrade is too low !\033[0m");
 				}
 		};
 

@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 20:36:25 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/18 13:32:22 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/19 15:41:11 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ class	Bureaucrat
 			public:
 				virtual const char* what() const throw()
 				{
-					return ("[Bureaucrat] Grade is too high !");
+					return ("\033[31m[Bureaucrat] Grade is too high !\033[0m");
 				}
 		};
 
@@ -49,7 +49,7 @@ class	Bureaucrat
 			public:
 				virtual const char* what() const throw()
 				{
-					return ("[Bureaucrat] Grade is too low !");
+					return ("\033[31m[Bureaucrat] Grade is too low !\033[0m");
 				}
 		};
 

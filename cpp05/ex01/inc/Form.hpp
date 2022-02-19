@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 19:55:36 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/18 13:41:05 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/19 15:49:10 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ class	Form
 			public:
 				virtual const char* what() const throw()
 				{
-					return ("[Form] Grade is too high !");
+					return ("\033[31m[Form] Grade is too high !\033[0m");
 				}
 		};
 
@@ -48,7 +48,7 @@ class	Form
 			public:
 				virtual const char* what() const throw()
 				{
-					return ("[Form] Grade is too low !");
+					return ("\033[31m[Form] Grade is too low !\033[0m");
 				}
 		};
 
