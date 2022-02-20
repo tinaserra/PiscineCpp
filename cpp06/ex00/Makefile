@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vserra <vserra@student.42.fr>              +#+  +:+       +#+         #
+#    By: tinaserra <tinaserra@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/07 17:06:30 by tinaserra         #+#    #+#              #
-#    Updated: 2022/02/19 22:30:41 by vserra           ###   ########.fr        #
+#    Updated: 2022/02/20 19:52:41 by tinaserra        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = detectType.cpp \
-	  DisplayType.cpp \
+	  castType.cpp \
 	  main.cpp
 
 NAME = StaticCast
