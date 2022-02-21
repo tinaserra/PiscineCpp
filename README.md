@@ -153,3 +153,5 @@ Le fait que A::F2() soit déclarée virtual et supplantée par B::F2() signifie 
 On parle alors de liaison **dynamique** (dynamic binding en anglais) par opposition à la liaison **statique** faite lors de l'édition de liens.
 
 [En savoir plus](https://cpp.developpez.com/faq/cpp/?page=Les-fonctions-membres-virtuelles)
+
+[les casts en c++](https://zestedesavoir.com/tutoriels/553/les-conversions-de-types-en-c/#2-15505_static_cast-et-reinterpret_cast)
