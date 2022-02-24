@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 16:26:45 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/24 16:28:32 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/24 17:11:09 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class	MutantStack : public std::stack<T>
 {
 	public:
 		MutantStack(void) {}
-		MutantStack(MutantStack const & src) : std::stack<T>(src) {}
+		MutantStack(MutantStack const & save) : std::stack<T>(save) {}
 		virtual ~MutantStack(void) {}
 
 		MutantStack<T>	&operator=(MutantStack const & rhs)

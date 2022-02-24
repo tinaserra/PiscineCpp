@@ -6,7 +6,7 @@
 /*   By: vserra <vserra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 16:26:03 by vserra            #+#    #+#             */
-/*   Updated: 2022/02/24 17:06:11 by vserra           ###   ########.fr       */
+/*   Updated: 2022/02/24 17:07:34 by vserra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,36 +94,6 @@ int	main()
 		std::list<int> s(l);
 		std::cout << "[stack] back: " << s.back() << std::endl;
 		std::cout << "[stack] size: " << s.size() << std::endl;
-
-
-		
-		// std::cout << "List:" << std::endl;
-		// std::list<int> l;
-		// l.push_back(5);
-		// l.push_back(17);
-		// std::cout << l.back() << std::endl;
-		// l.pop_back();
-		// std::cout << l.size() << std::endl;
-		// l.push_back(3);
-		// l.push_back(5);
-		// l.push_back(737);
-		// //[...]
-		// l.push_back(0);
-		// l.push_back(42);
-		// std::list<int>::iterator it = l.begin();
-		// std::list<int>::iterator ite = l.end();
-		// ++it;
-		// --it;
-		// std::cout << "-------------" <<std::endl;
-		// while (it != ite)
-		// {
-		// 	std::cout << *it << std::endl;
-		// 	++it;
-		// }
-		// std::cout << "-------------" <<std::endl;
-		// std::list<int> s(l);
-		// std::cout << "s.back() = " << s.back() << std::endl;
 	}
-	
 	return (0);
 }
